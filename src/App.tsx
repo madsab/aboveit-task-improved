@@ -28,13 +28,13 @@ function App() {
   }, []);
 
   const handleInput = (value: string) => {
-    setInputFilter(value);
+    setInputFilter(value.toLowerCase());
   };
   return (
     <div className="layout">
       <h1>Find your Dream Cat</h1>
       <Searchbar onChange={handleInput} />
-      <main className="displayCats">
+      <main id="main" className="displayCats">
         <div className="moreInfo"></div>
         <>
           {loading

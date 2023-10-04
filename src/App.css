@@ -66,8 +66,8 @@
 .catCard:hover .catCardFront{
   justify-content: center;
   justify-items: center;
-  transition: 0.2s ease-in-out;
   transform: translateY(-70%);
+  transition: 0.1s linear;
 }
 
 .catCard:hover{

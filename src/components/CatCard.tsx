@@ -28,30 +28,29 @@ export interface CatProps {
   suppressed_tail: number;
   short_legs: number;
   wikipedia_url: string;
+  hypoallergenic: number;
+  reference_image_id: string;
+  image?: {
+    id: string;
+    width: number;
+    height: number;
+    url: string;
+  };
 }
 
 const CatCard: React.FC<CatProps> = ({ ...props }) => {
   const [visible, setVisible] = useState(false);
-  const handleClick = () => {
-    visible ? setVisible(false) : setVisible(true);
-  };
+
   return (
-    <div className="catCard" onClick={handleClick}>
-      <p>{props.name}</p>
-      <img src={props.cfa_url} alt={props.name} />
-      {visible ? (
-        <div className="info">
-          <p>{props.description}</p>
-          <p>{props.life_span}</p>
-          <p>{props.short_legs}</p>
-          <p>{props.social_needs}</p>
-          <p>{props.stranger_friendly}</p>
-          <p>{props.origin}</p>
-          <p>{props.life_span}</p>
-        </div>
-      ) : (
-        ""
-      )}
+    <div className="catCard">
+      <div className="catCardFront">
+        <h3>{props.name}</h3>
+        <p>Origin: {props.origin}</p>
+        <p>Stranger Friendly: {props.stranger_friendly}</p>
+        <p>Life Span: {props.life_span}</p>
+        <p>Click for more info</p>
+      </div>
+      <img className="img" src={props.image?.url} alt={props.name} />
     </div>
   );
 };

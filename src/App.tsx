@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import Searchbar from "./components/Searchbar";
-import CatCard from "./components/CatCard";
+import CatCard, { CatProps } from "./components/CatCard";
 
 function App() {
   const [cats, setCats] = useState([]);
@@ -33,7 +33,7 @@ function App() {
         <>
           {loading
             ? "Loading..."
-            : cats.map((cat, index) => {
+            : cats.map((cat: CatProps, index) => {
                 return <CatCard key={index} {...cat} />;
               })}
         </>

@@ -7,6 +7,7 @@ function App() {
   const [cats, setCats] = useState([]);
   const [loading, setLoading] = useState(true);
   const [inputFilter, setInputFilter] = useState("");
+  const [noSearch, setNoSearch] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -15,7 +16,6 @@ function App() {
           "https://api.thecatapi.com/v1/breeds?limit=100&page=0&api_key=live_HQ2p2jHlCzLlVWK1G8ZjfFbqZWzBHewj6VhHfrDpdx5DLCVO58PCKRFrq8kYJLdZ"
         );
         const result = await response.json();
-        console.log(result);
         setCats(result);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -29,6 +29,10 @@ function App() {
 
   const handleInput = (value: string) => {
     setInputFilter(value.toLowerCase());
+    cats.filter((cat: CatProps) => cat.name.toLowerCase().includes(inputFilter))
+      .length === 0
+      ? setNoSearch("No Options")
+      : setNoSearch("");
   };
   return (
     <div className="layout">
@@ -46,6 +50,7 @@ function App() {
                 .map((cat: CatProps, index) => {
                   return <CatCard key={index} {...cat} />;
                 })}
+          {noSearch}
         </>
       </main>
     </div>

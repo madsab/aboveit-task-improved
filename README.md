@@ -1,5 +1,4 @@
-# AboveIt task
-To see hosted version go to: https://aboveit.madsbarnes.com/
+
 
 # Task
 Lag en webapplikasjon som presenterer informasjon om katteraser. Følgende API-kall lister opp 100 katteraser som du skal bruke i applikasjonen: https://api.thecatapi.com/v1/breeds?limit=100&page=0&api_key=live_HQ2p2jHlCzLlVWK1G8ZjfFbqZWzBHewj6VhHfrDpdx5DLCVO58PCKRFrq8kYJLdZ

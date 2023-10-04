@@ -41,6 +41,12 @@ const CatCard: React.FC<CatProps> = ({ ...props }) => {
       <img src={props.cfa_url} alt={props.name} />
       {visible ? (
         <div className="info">
+          <p>{props.description}</p>
+          <p>{props.life_span}</p>
+          <p>{props.short_legs}</p>
+          <p>{props.social_needs}</p>
+          <p>{props.stranger_friendly}</p>
+          <p>{props.origin}</p>
           <p>{props.life_span}</p>
         </div>
       ) : (

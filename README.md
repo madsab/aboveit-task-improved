@@ -1,27 +1,13 @@
-# React + TypeScript + Vite
+# AboveIt task
+To see hosted version go to: https://aboveit.madsbarnes.com/
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Task
+Lag en webapplikasjon som presenterer informasjon om katteraser. Følgende API-kall lister opp 100 katteraser som du skal bruke i applikasjonen: https://api.thecatapi.com/v1/breeds?limit=100&page=0&api_key=live_HQ2p2jHlCzLlVWK1G8ZjfFbqZWzBHewj6VhHfrDpdx5DLCVO58PCKRFrq8kYJLdZ
 
-Currently, two official plugins are available:
+Applikasjonen skal liste opp katteraser med bilde, navn og annen informasjon du finner relevant. Når brukeren trykker på en katterase i listen skal mer informasjon om rasen presenteres på en fin måte. Applikasjonen skal også ha funksjonalitet for å søke etter katteraser.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Run locally
+1. Clone repo <code>git clone https://github.com/madsab/aboveIt-task.git</code>
+2. <code> cd aboveit-task</code>
+3. Run <code>pnpm i</code>
+4. Run <code>pnpm run dev</code>

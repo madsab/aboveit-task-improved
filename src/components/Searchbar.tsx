@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Icon } from "@iconify/react";
 import { CatProps } from "./CatCard";
 
@@ -7,8 +6,7 @@ interface ISearchbarProps {
 }
 
 const Searchbar: React.FC<ISearchbarProps> = (props) => {
-  const [input, setInput] = useState("");
-
+  props;
   return (
     <div className="searchbar">
       <Icon icon={"material-symbols:search"} color="white" />

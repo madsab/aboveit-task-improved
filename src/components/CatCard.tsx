@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../App.css";
 
 export interface CatProps {
@@ -39,8 +39,6 @@ export interface CatProps {
 }
 
 const CatCard: React.FC<CatProps> = ({ ...props }) => {
-  const [visible, setVisible] = useState(false);
-
   return (
     <div className="catCard">
       <div className="catCardFront">

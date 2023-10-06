@@ -2,7 +2,7 @@ import React from "react";
 import { CatProps } from "./CatCard";
 
 interface IMoreInfoProps {
-  cat: CatProps | undefined;
+  cat: CatProps | null;
 }
 
 const MoreInfo: React.FC<IMoreInfoProps> = ({ cat }) => {
@@ -23,6 +23,27 @@ const MoreInfo: React.FC<IMoreInfoProps> = ({ cat }) => {
           <p>Stranger Friendly: {cat?.stranger_friendly}</p>
           <p>Supressed tail: {cat?.suppressed_tail}</p>
           <p>Temperament: {cat?.temperament}</p>
+        </div>
+        <div>
+          <h2>Links for more info</h2>
+          <p>
+            Vetstreet:{" "}
+            <a target="_blank" href={cat?.vetstreet_url}>
+              {cat?.vetstreet_url}
+            </a>
+          </p>
+          <p>
+            Vca hospital:
+            <a target="_blank" href={cat?.vcahospitals_url}>
+              {cat?.vcahospitals_url}
+            </a>
+          </p>
+          <p>
+            Wikipedia:{" "}
+            <a target="_blank" href={cat?.wikipedia_url}>
+              {cat?.wikipedia_url}
+            </a>
+          </p>
         </div>
       </section>
     </div>

@@ -53,8 +53,10 @@
   flex-direction: column;
   top: 70%;
   background: linear-gradient(#181212, #090a0e);
+  pointer-events: none;
 
 }
+
 
 .catCardFront p {
   font-size: small;
@@ -86,19 +88,31 @@
 
 
 .moreInfo {
-  z-index: 10;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background-color: rgb(25, 23, 23);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .moreInfo img {
   object-fit: contain;
+  pointer-events: none;
 }
 
 .img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.noShow {
+  display: none;
+}
+
+.Show{
+  position: absolute;
+  width: 80%;
+  display: flex;
+  background-color: rgb(25, 23, 23);
+  border: solid 1px slateblue;
+  border-radius: 15px;
 }
